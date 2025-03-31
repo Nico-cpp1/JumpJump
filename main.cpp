@@ -3,14 +3,14 @@
 
 int main() {
     // Window dimensions
-    const int windowWidth = 600; //on laptop 600 // on Pc 720
-    const int windowHeight = 900; // on laptop 900 // on PC 1280
+    const int windowWidth = 400;
+    const int windowHeight = 600;
     InitWindow(windowWidth, windowHeight, "JumpJump");
 
     // Load background
     Texture2D background = LoadTexture("Background/background.png");
     
-    Character player("Character/character.png", 16, 16, 0, 1, 1, windowWidth / 2 - (16 * 6), windowHeight - (16 * 6));
+    Character player("Character/character.png", 16, 16, 0, 1, 1, windowWidth / 2 - (16 * 3), windowHeight - (16 * 3));
 
     SetTargetFPS(60);
 

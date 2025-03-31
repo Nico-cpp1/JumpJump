@@ -38,7 +38,7 @@ void Character::draw() {
 
     Rectangle spriteDest = {
         posX, posY, 
-        (float) spriteWidth * 6.0f, (float)spriteHeight * 6.0f // Scale up the sprite
+        (float) spriteWidth * 3.0f, (float)spriteHeight * 3.0f // Scale up the sprite
     };
 
     Vector2 origin = {0, 0}; // No rotation
