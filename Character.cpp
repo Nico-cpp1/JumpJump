@@ -14,13 +14,13 @@
 }
 
 // Move the character based on keyboard input
-void Character::move(float deltaTime) {
+void Character::move(float deltaTime, int windowWidth) {
     float speed = 200.0f; // Movement speed in pixels per second
 
-    if (IsKeyDown(KEY_D)|| posX<=-spriteWidth) {
+    if (IsKeyDown(KEY_D)&& posX <= windowWidth + spriteWidth * scale) {
         posX += speed * deltaTime;
     }
-    if (IsKeyDown(KEY_A) || posX>=520) {
+    if (IsKeyDown(KEY_A) && posX>= 0 -spriteWidth * scale) {
         posX -= speed * deltaTime;
     }
 }
@@ -38,7 +38,7 @@ void Character::draw() {
 
     Rectangle spriteDest = {
         posX, posY, 
-        (float) spriteWidth * 3.0f, (float)spriteHeight * 3.0f // Scale up the sprite
+        (float) spriteWidth * scale, (float)spriteHeight * scale // Scale up the sprite
     };
 
     Vector2 origin = {0, 0}; // No rotation

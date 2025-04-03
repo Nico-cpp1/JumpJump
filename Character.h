@@ -9,7 +9,7 @@ public:
     Character(const char* filename, int spriteWidth, int spriteHeight, int spriteRow, int spriteCount, int spritesPerSecond, float posX, float posY);
 
     // Function to update the character's movement
-    void move(float deltaTime);
+    void move(float deltaTime, int windowWidth);
 
     // Function to draw the character on the screen
     void draw();
@@ -17,9 +17,10 @@ public:
     int spriteRow; // The row in the sprite sheet
     int spriteCount; // Number of sprites in the row
     int spritesPerSecond; // How fast the sprite animation runs
-    int spriteWidth;
+    int spriteWidth = 16;
     bool facingLeft = false;
     float idleTimer;
+    float scale = 6.0f;
 
 protected:
 

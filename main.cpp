@@ -2,15 +2,14 @@
 #include "Character.h"
 
 int main() {
-    // Window dimensions
-    const int windowWidth = 400;
-    const int windowHeight = 600;
+    const int windowWidth = 720;
+    const int windowHeight = 1280;
     InitWindow(windowWidth, windowHeight, "JumpJump");
 
     // Load background
     Texture2D background = LoadTexture("Background/background.png");
     
-    Character player("Character/character.png", 16, 16, 0, 1, 1, windowWidth / 2 - (16 * 3), windowHeight - (16 * 3));
+    Character player("Character/character.png", 16, 16, 0, 1, 1, windowWidth / 2 - (16 * 6), windowHeight - (16 * 6));
 
     SetTargetFPS(60);
 
@@ -46,7 +45,7 @@ int main() {
             }
         }
 
-    player.move(deltaTime);
+    player.move(deltaTime, windowWidth);
     player.draw();
     DrawText(TextFormat("FT: %08i", (int)GetTime()), 0, 220, 20, BLACK);
 
