@@ -139,15 +139,21 @@
         font-size: 14px;
         color: #333;
     }
-    
     canvas {
         width: 330px;
         height: 500px;
     } 
-} 
+}
+/*monitor klein*/
+@media (min-width: 1600px){
+    canvas {
+        width: 430px;
+        height: 700px;
+    } 
+}
 
-/*monitor*/
-@media (min-width: 1700px) {
+/*monitor groß*/
+@media (min-width: 1921px) {
 
     #game-title {
         font-size: 40px;
@@ -161,7 +167,7 @@
     }
 
     canvas {
-        width: 500px;
+        width: 550px;
         height: 1000px;
     } 
 }
