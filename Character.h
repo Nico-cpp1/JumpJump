@@ -14,7 +14,11 @@ public:
     // Function to draw the character on the screen
     void draw();
 
+    void update(float deltaTime);
+
     void jump(float deltaTime, int windowHeight);
+
+    void unload();
 
     int spriteRow; // The row in the sprite sheet
     int spriteCount; // Number of sprites in the row
@@ -30,6 +34,9 @@ public:
     float posY; // Character's Y position
     int velocity = 4;
     int sprite_size = spriteHeight * scale; // Size of the sprite
+    int border = 62;
+
+    Sound jumpSounds[7]; // Array of jump sounds
 
 protected:
 
